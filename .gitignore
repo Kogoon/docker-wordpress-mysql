@@ -1,5 +1,8 @@
 .env
-./mysql
-./nginx
-./logs
 
+
+
+/mysql/
+/config/
+/logs/
+/wordpress/
