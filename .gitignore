@@ -1,5 +1,8 @@
 README.md/
 
+# Python
+
+
 # Environment
 .env
 .venv
@@ -8,6 +11,7 @@ venv/
 ENV/
 env.bak/
 
+# config directories for docker-compose
 /mysql/
 /config/
 /logs/
