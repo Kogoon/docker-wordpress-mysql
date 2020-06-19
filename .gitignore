@@ -1,8 +1,9 @@
 .env
-
+README.md
 
 
 /mysql/
 /config/
 /logs/
 /wordpress/
+/nginx/
