@@ -1,5 +1,12 @@
+README.md/
+
+# Environment
 .env
-README.md
+.venv
+env/
+venv/
+ENV/
+env.bak/
 
 /mysql/
 /config/
