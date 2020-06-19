@@ -3,6 +3,7 @@ Q4. Create Table:wp_random on database.
 column: id(int, autoincrement), random(int)
 
 >CREATE TABLE wp_random (
-	>  id int(11) unsigned NOT NULL AUTO_INCREMENT,
+	>  id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 	>  random int(11) unsigned NOT NULL
+	>  PRIMARY KEY (id)
 	);
