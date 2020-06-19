@@ -1,22 +1,74 @@
-version: '3'
+version: '3.3'
 
 services:
-  web:
+  wordpress:
+    depends_on:
+      - mysql
     restart: "on-failure"
+    image: wordpress:${WORDPRESS_VERSION}
+    container_name: wordpress
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Seoul
+      - WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}
+      - WORDPRESS_DB_PORT=${WORDPRESS_DB_PORT}
+      - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME}
+      - WORDPRESS_DB_USER=${WORDPRESS_DB_USER}
+      - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD}
+        #expose:
+        #- ${SERVER_PORT}
+    networks:
+      - frontend
+      - backend
+    volumes:
+      - ${WORDPRESS_DATA_DIR}:/var/www/html
+        #- ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+    links:
+      - mysql
      
   nginx:
     restart: "on-failure"
+    image: nginx:stable 
+    #build: ./nginx
+    container_name: 'nginx-server'
+    env_file:
+      - .env
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ${NGINX_CONF_DIR}:/etc/nginx/conf.d 
+      - ${NGINX_LOG_DIR}:/var/log/nginx
+      - ${WORDPRESS_DATA_DIR}:/var/www/html
+    environment:
+      TZ: 'Asia/Seoul'
+    networks:
+      - frontend
+    depends_on:
+      - wordpress
 
 
   mysql:
     restart: always
-    image: mysql:5.7
-    container_name: 'mysql'
+    image: mysql:${MYSQL_VERSION}
+    container_name: mysql
+    env_file:
+      - .env
     environment:
-      MYSQL_DATABASE: 
-      MYSQL_USER: ${USER_NAME}
-      MYSQL_PASSWORD: ${PASSWORD}
-     
+      - TZ=Asia/Seoul
+      - MYSQL_DATABASE=${MYSQL_DATABASE_NAME}
+      - MYSQL_USER=${MYSQL_USER_NAME}
+      - MYSQL_PASSWORD=${MYSQL_USER_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    networks:
+      - backend
+    volumes:
+      - ${MYSQL_DIR}:/var/lib/mysql
 
-    
 
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
