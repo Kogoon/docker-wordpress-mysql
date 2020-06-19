@@ -16,14 +16,12 @@ services:
       - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME}
       - WORDPRESS_DB_USER=${WORDPRESS_DB_USER}
       - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD}
-        #expose:
-        #- ${SERVER_PORT}
     networks:
       - frontend
       - backend
     volumes:
       - ${WORDPRESS_DATA_DIR}:/var/www/html
-        #- ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - ./config/php.ini:/usr/local/etc/php/conf.d/conf.ini
     links:
       - mysql
      
@@ -56,7 +54,6 @@ services:
     env_file:
       - .env
     environment:
-      - TZ=Asia/Seoul
       - MYSQL_DATABASE=${MYSQL_DATABASE_NAME}
       - MYSQL_USER=${MYSQL_USER_NAME}
       - MYSQL_PASSWORD=${MYSQL_USER_PASSWORD}
