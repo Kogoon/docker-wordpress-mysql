@@ -1,6 +1,22 @@
 version: '3.3'
 
 services:
+  api:
+    build: ./api
+    container_name: api
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Seoul
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    networks:
+      - frontend
+      - backend
+    links:
+      - mysql
+      - redis
+
   wordpress:
     depends_on:
       - mysql
@@ -28,7 +44,6 @@ services:
   nginx:
     restart: "on-failure"
     image: nginx:stable 
-    #build: ./nginx
     container_name: 'nginx-server'
     env_file:
       - .env
@@ -46,7 +61,12 @@ services:
     depends_on:
       - wordpress
 
-
+  redis:
+    image: redis:alpine
+    container_name: 'REDIS'
+    networks:
+      - backend
+  
   mysql:
     restart: always
     image: mysql:${MYSQL_VERSION}
