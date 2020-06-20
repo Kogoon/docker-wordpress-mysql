@@ -17,3 +17,9 @@ env.bak/
 /logs/
 /wordpress/
 /nginx/
+
+
+# wordpress theme & plugin
+!wordpress/wp-content/plugins/google-site-kit/
+!wordpress/wp-content/plugins/simple-google-recaptcha/
+!wordpress/wp-content/themes/techengage
