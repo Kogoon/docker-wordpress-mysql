@@ -6,7 +6,6 @@ import utils
 #
 # For RandomTable
 # 
-#
 class RandomTable(Database):
 
     # For Get data by ID
@@ -37,7 +36,7 @@ class RandomTable(Database):
         print("DEBUG SQL ===> {}".format(sql))
         
         self.cursor.execute(sql)
-        result = self.cursor.fetchall(sql)
+        result = self.cursor.fetchall()
 
         return result
 
@@ -45,10 +44,9 @@ class RandomTable(Database):
     # For Insert
     def insert(self, j):
         
-        sql =  "INSERT INTO wp_random(id, random) "
-        sql += "values('{id}', '{random}')".format(
-                id=utils.addslashed(json.dumps(j.get("id", ""))),
-                random=utils.addslashed(json.dumps(jget("random", "")))
+        sql =  "INSERT INTO wp_random(random) "
+        sql += "values('{random}')".format(
+                random=utils.addslashes(json.dumps(j.get("random", "")))
             )
         print("DEBUG SQL ===> {}".format(sql))
         
@@ -68,7 +66,7 @@ class RandomTable(Database):
         u_random = j.get("random", "")
 
         sql =  "UPDATE wp_random SET "
-        if len(u_random) > 0:
+        if u_random is not None: 
             sql += "random = '{}' ".format(u_random)
         else:
             return "error"

@@ -13,8 +13,8 @@ from randomtable import RandomTable
 api = Namespace('Random', description='APIs for random algorithms')
 
 resource_random = api.model('Random', {
-    'id': fields.Integer(description='id is ID'),
-    'random': fields.String(description='random number here', required=True)
+    #'id': fields.Integer(description='id is ID'),
+    'random': fields.Integer(description='random number here', required=True)
     })
 
 luParser = api.parser()
@@ -68,7 +68,7 @@ class Random(Resource):
     @api.response(400, 'Validation Error')
     def delete(self, id):
         ''' random 정보를 삭제한다. '''
-        return delete_randon(id)
+        return delete_random(id)
 
 
 # INSERT
@@ -81,14 +81,16 @@ def add_random():
     db = RandomTable()
     result = db.insert(j)
     result = {"message":"ok"} if result is None else result
-
+    
+    """
     response = app.response_class(
             response=json.dumps(result),
             status=200,
             mimetype='application/json'
         )
+    """
 
-    return response
+    return result
 
 
 # LIST
@@ -101,24 +103,58 @@ def list_randoms():
     res = db.list(page=page, itemsInPage=np)
 
     result = {
-            "users" : "{}".format(res),
-            "count" : len(res),
-            "page"  : page
+            "randoms" : "{}".format(res),
+            "count"   : len(res),
+            "page"    : page
         }
-    print("DEBUG> {}".format(result))
+    print("DEBUG > {}".format(result))
+
     return result
 
 
 # GET
-def get_random():
-   pass 
+def get_random(id):
+    
+    db = RandomTable()
+    result = db.get(id)
+
+    return result
 
 
 # UPDATE
-def update_random():
-    pass
+def update_random(id):
+    
+    j  = request.get_json()
+    db = RandomTable()
+
+    result = db.update(id, j)
+    result = {"message":"ok"} if result is None else result
+
+    """
+    response = app.response_class (
+            response = json.dumps(result),
+            status=200,
+            mimetype='application/json'
+        )
+    """
+
+    return result
 
 
 # DELETE
-def delete_random():
-    pass
+def delete_random(id):
+    
+    db = RandomTable()
+    result = db.delete(id)
+    result = {"message":"ok"} if result is None else result
+
+    """
+    response = app.response_class (
+            response = json.dumps(result),
+            status=200,
+            mimetype='application/json'
+        )
+    """
+
+    return result
+
