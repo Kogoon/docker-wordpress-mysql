@@ -24,3 +24,6 @@ env.bak/
 !**/google-site-kit/
 !wordpress/**/simple-google-recaptcha/
 !**/techengage
+
+# NGINX
+!**/nginx.conf
