@@ -1,6 +1,7 @@
 import pymysql
 import os
 
+
 #
 # 기말 과제를 위한.
 # Database 클래스. 
@@ -28,18 +29,18 @@ class Database():
     def execute(self, query, args={}):
         self.cursor.execute(query, args)
     
-    # 하나의 row를 가져오기 위한. 
+    # 하나의 row쿼리를 가져오기 위한. 
     def executeOne(self, query, args={}):
         self.cursor.execute(query, args)
         row = self.cursor.fetchone()
         return row
     
-    # 다수의 row를 가져오기 위한.
+    # 다수의 row쿼리를 가져오기 위한.
     def executeAll(self, query, args={}):
         self.cursor.execute(query, args)
         row = self.cursor.fetchall()
         return row
     
-    # 커밋을 위한.
+    # 변경한 내용 커밋을 위한.
     def commit(self):
         self.db.commit()
