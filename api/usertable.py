@@ -1,4 +1,5 @@
 from database import Database
+from datetime import datetime
 import bcrypt
 import json
 import pytz
@@ -25,7 +26,7 @@ class UserTable(Database):
         try:
             self.cursor.execute(sql)
             result = self.cursor.fetchall()
-        except:
+        except Exception as e:
             return {"error":"{}".format(e)}
         
         result = {} if len(result) == 0 else result[0]
@@ -55,6 +56,7 @@ class UserTable(Database):
 
     #
     def hashPasswd(self, passwd):
+        
         salt   = bcrypt.gensalt()
         hashed = wp.crypt_private(passwd.encode('utf-8'), salt)
         print(hashed)
@@ -65,14 +67,14 @@ class UserTable(Database):
     def get_auth(self, user_login, passwd):
         
         sql  = "SELECT user_pass "
-        sql += "FROM wp_users WHERE user_login='{}';".format(user_login)
+        sql += "FROM wp_users WHERE user_login=\'{}\';".format(user_login)
         print("DEBUG SQL ===> {}".format(sql))
         
         result = False
         try:
             onerow = self.executeOne(sql)
             print("DEBUG row = {}".format(onerow))
-            result = wp.check(passwd,onerow)
+            result = wp.check(passwd, onerow)
             return result
         except Exception as e:
             return {"error" : "{}".format(e)}
@@ -131,7 +133,7 @@ class UserTable(Database):
         user_email = j.get("user_email","")
         display_name = j.get("display_name","")
 
-        sql = "UPDATE users SET "
+        sql = "UPDATE wp_users SET "
         if len(user_nicename) > 0:
             sql += " user_nicename = '{}', ".format(user_nicename)
         if len(user_email) > 0:
