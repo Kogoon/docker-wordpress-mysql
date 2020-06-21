@@ -2,9 +2,9 @@ domain http://final.kogoon.works
 
 
 
-wordpress.. http://final.kogoon.works
+wordpress.. http://final.kogoon.works:8080
 
-swagger.... http://final.kogoon.works:5000
+swagger.... http://final.kogoon.works:5000/api/doc/
 
 nginx path.. 설정 실패.. 
 
