@@ -82,14 +82,6 @@ def add_random():
     result = db.insert(j)
     result = {"message":"ok"} if result is None else result
     
-    """
-    response = app.response_class(
-            response=json.dumps(result),
-            status=200,
-            mimetype='application/json'
-        )
-    """
-
     return result
 
 
@@ -130,14 +122,6 @@ def update_random(id):
     result = db.update(id, j)
     result = {"message":"ok"} if result is None else result
 
-    """
-    response = app.response_class (
-            response = json.dumps(result),
-            status=200,
-            mimetype='application/json'
-        )
-    """
-
     return result
 
 
@@ -147,14 +131,6 @@ def delete_random(id):
     db = RandomTable()
     result = db.delete(id)
     result = {"message":"ok"} if result is None else result
-
-    """
-    response = app.response_class (
-            response = json.dumps(result),
-            status=200,
-            mimetype='application/json'
-        )
-    """
 
     return result
 

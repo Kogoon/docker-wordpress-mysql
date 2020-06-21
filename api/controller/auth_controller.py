@@ -33,15 +33,15 @@ luParser = api.parser()
 luParser.add_argument('page', type=int, help='Page number', location='query')
 luParser.add_argument('itemsInPage', type=int, help='Number of Items in a page', location='query')
 
-#PaParser = api.parser()
-#PaParser.add_argument('password', type=str, help='Password', location='query')
+PaParser = api.parser()
+PaParser.add_argument('password', type=str, help='Enter the "admin" password', location='query')
 
 #
 @api.route('/users')
 class Users(Resource):
 
     @api.expect(luParser)
-    @api.expect(resource_auth)
+    @api.expect(PaParser)
     @api.response(200, 'Success')
     @api.response(400, 'Validation Error')
     def get(self):
@@ -62,20 +62,9 @@ class Signin(Resource):
         user_pass = request.args.get('user_pass')
         result = db.get_auth(user_login, user_pass)
         if result:
-            return get_user(user_login)
+            return "Correct Password"
         else:
             return "Please make sure the user name and password are correct"
-
-"""
-    @api.expect(resource_auth)
-    @api.response(200, 'Success')
-    @api.response(400, 'Validation Error')
-    def post(self, user_login):
-        ''' 사용자 인증정보를 인증한다. '''
-        db = UserTable()
-        j = request.get_json()
-        return get_auth(user_login, j.get('user_pass'))
-"""
 
 
 #

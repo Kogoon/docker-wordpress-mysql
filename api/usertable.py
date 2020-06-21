@@ -58,16 +58,15 @@ class UserTable(Database):
     def hashPasswd(self, passwd):
         
         salt   = bcrypt.gensalt()
-        hashed = wp.crypt_private(passwd.encode('utf-8'), salt)
-        print(hashed)
-        return hashed
+        hashed = bcrypt.hashpw(passwd.encode('utf-8'), salt)
+        return hashed.decode('utf-8', 'ignore')
 
 
     #
     def get_auth(self, user_login, passwd):
         
         sql  = "SELECT user_pass "
-        sql += "FROM wp_users WHERE user_login=\'{}\';".format(user_login)
+        sql += "FROM wp_users WHERE user_login='{}'".format(user_login)
         print("DEBUG SQL ===> {}".format(sql))
         
         result = False
