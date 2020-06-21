@@ -21,6 +21,6 @@ env.bak/
 
 
 # wordpress theme & plugin
-!wordpress/**/google-site-kit/
+!**/google-site-kit/
 !wordpress/**/simple-google-recaptcha/
-!wordpress/**/techengage
+!**/techengage
