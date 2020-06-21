@@ -2,7 +2,7 @@ domain http://final.kogoon.works
 
 
 
-wordpress.. http://final.kogoon.works:8080
+wordpress.. http://final.kogoon.works
 
 swagger.... http://final.kogoon.works:5000/api/doc/
 
