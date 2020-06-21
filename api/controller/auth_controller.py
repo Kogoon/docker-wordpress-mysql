@@ -56,8 +56,78 @@ class Signup(Resource):
         ''' 사용자 인증정보를 등록한다. '''
         return add_user()
 
+@api.route('/user/<user_login>')
+@api.doc(params={'user_login':'This is a userID for signIn(login'})
+class User(Resource):
 
-"""
+    @api.response(200, 'Success')
+    @api.response(400, 'Validation Error')
+    def get(self, user_login):
+        pass
+
+    @api.response(200, 'Success')
+    @api.response(400, 'Validation Error')
+    def put(self, user_login):
+        pass
+
+    @api.response(200, 'Success')
+    @api.response(400, 'Validation Error')
+    def delete(self, user_login):
+        pass
+
+
+#
+def get_user(user_login):
+
+    cache = UserCache()
+    result = cache.get_user(user_login)
+
+    if result is not None:
+        result = ast.literal_eval(result.decode('utf-8', 'ignore'))
+    else:
+        db = UserTable()
+        result = db.get(user_login)
+        cache.set_user(user_login, str(result))
+
+    result['token'] = get_raw_jwt()
+
+    return result
+
+
+#
+def update_user(user_login):
+
+    j = request.get_json()
+    db = UserTable()
+    result = db.update(user_login, j)
+    result = {"message":"ok"} if result if None else result
+
+    response = app.response_class(
+            response=json.dumps(result),
+            status=200,
+            mimetype='application/json'
+        )
+
+    return response
+
+
+#
+def delete_user(user_login):
+
+    db = UserTable()
+    result = db.delete(user_login)
+    result = {"message":"ok"} if result is None else result
+
+    response = app.response_class(
+            response=json.dumps(result),
+            status=200,
+            mimetype='application/json'
+        )
+
+    return response
+
+
+#
 def get_auth(user_login, user_pass):
 
     db = UserTable()
@@ -73,4 +143,4 @@ def get_auth(user_login, user_pass):
     set_refresh_cookies(resp, refresh_token)
 
     return resp
-"""
+

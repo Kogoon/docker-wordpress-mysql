@@ -46,33 +46,6 @@ class Users(Resource):
 
 #
 #
-#
-@api.route('/user/<user_login>')
-@api.doc(params={'id':'This is a userID.'})
-class User(Resource):
-
-    @jwt_required
-    @api.response(200, 'Success')
-    def get(self, user_login):
-        ''' 사용자 정보의 상세내역을 조회한다.'''
-        return get_user(id)
-
-    @jwt_required
-    @api.response(200, 'Success')
-    @api.expect(resource_user, validate=False)
-    def put(self, user_login):
-        ''' 사용자 정보를 변경한다. '''
-        return update_user(id)
-
-    @jwt_required
-    @api.response(200, 'Success')
-    def delete(self, user_login):
-        ''' 사용자 정보를 삭제한다.  '''
-        return delete_user(id)
-
-
-#
-#
 def add_user():
     
     j = request.get_json()
@@ -109,50 +82,3 @@ def list_users():
     }
 
     return result
-
-# Get user from user by ID example
-def get_user(id):
-
-    cache = UserCache()
-    result = cache.get_user(id)
-
-    if result is not None:
-        result = ast.literal_eval(result.decode('utf-8','ignore'))
-    else:
-        db = UserTable()
-        result = db.get(id)
-        cache.set_user(id, str(result))
-        
-    result['token'] = get_raw_jwt()
-    
-    return result
-
-
-def update_user(id):
-
-    j = request.get_json()
-    db = UserTable()
-    result = db.update(id, j)
-    result = {"message":"ok"} if result is None else result
-
-    response = app.response_class(
-            response=json.dumps(result),
-            status=200,
-            mimetype='application/json'
-    )
-    return response
-
-
-def delete_user(id):
-
-    db = UserTable()
-    result = db.delete(id)
-    result = {"message":"ok"} if result is None else result
-
-    response = app.response_class(
-            response=json.dumps(result),
-            status = 200,
-            mimetype='application/json'
-    )
-
-    return response
