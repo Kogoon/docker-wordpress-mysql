@@ -9,6 +9,7 @@ from flask_jwt_extended import (
 from .user_controller import resource_user
 from .user_controller import add_user
 from usertable import UserTable
+from wp import *
 
 
 api = Namespace('Auth', description="APIs for Auth")
@@ -31,7 +32,9 @@ class Signin(Resource):
     @api.response(400, 'Validation Error')
     def get(self, user_login):
         ''' 사용자 인증정보를 인증한다. '''
+        db = UserTable()
         userpass = request.args.get('user_pass')
+        db.auth(user_login, user_pass)
         return get_auth(user_login, user_pass)
 
     @api.expect(resource_auth)
@@ -39,6 +42,7 @@ class Signin(Resource):
     @api.response(400, 'Validation Error')
     def post(self, user_login):
         ''' 사용자 인증정보를 인증한다. '''
+        db = UserTable()
         j = request.get_json()
         return get_auth(user_login, j.get('user_pass'))
 
@@ -53,6 +57,7 @@ class Signup(Resource):
         return add_user()
 
 
+"""
 def get_auth(user_login, user_pass):
 
     db = UserTable()
@@ -68,6 +73,4 @@ def get_auth(user_login, user_pass):
     set_refresh_cookies(resp, refresh_token)
 
     return resp
-
-
-
+"""

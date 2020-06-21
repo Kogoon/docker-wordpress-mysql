@@ -44,7 +44,6 @@ class Users(Resource):
         return list_users()
 
 
-
 #
 #
 #
@@ -55,21 +54,21 @@ class User(Resource):
     @jwt_required
     @api.response(200, 'Success')
     def get(self, user_login):
-        ''' comment'''
-        pass
+        ''' 사용자 정보의 상세내역을 조회한다.'''
+        return get_user(id)
 
     @jwt_required
     @api.response(200, 'Success')
     @api.expect(resource_user, validate=False)
     def put(self, user_login):
-        ''' comment '''
-        pass
+        ''' 사용자 정보를 변경한다. '''
+        return update_user(id)
 
     @jwt_required
     @api.response(200, 'Success')
     def delete(self, user_login):
-        ''' comment '''
-        pass
+        ''' 사용자 정보를 삭제한다.  '''
+        return delete_user(id)
 
 
 #
