@@ -1,6 +1,7 @@
 from database import Database
 import json
 import utils
+import wp
 
 
 #
@@ -28,6 +29,47 @@ class UserTable(Database):
 
         return result
 
+    
+    """
+    #
+    def get_passwd(self, user_login):
+        
+        sql  = "SELECT user_pass from wp_users "
+        sql += "WHERE user_login='{}';".format(user_login)
+        print("DEBUG SQL ===> {}".format(sql))
+        
+        result = ()
+        try:
+            self.cursor.execute(sql)
+            result = self.cursor.fetchone()
+        except Exception as e:
+            return {"error" : "{}".format(e)}
+
+        result = {} if len(result) == 0 else result[0]
+
+        return result
+    """
+
+
+    #
+    def get_auth(self, user_login, passwd):
+        
+        sql  = "SELECT user_pass "
+        sql += "FROM wp_users WHERE user_login='{}';".format(user_login)
+        print("DEBUG SQL ===> {}".format(sql))
+        
+        result = False
+        try:
+            onerow = self.executeOne(sql)
+            print("DEBUG row = {}".format(onerow))
+            result = wp.check(passwd,onerow)
+            return result
+        except Exception as e:
+            return {"error" : "{}".format(e)}
+
+        return result
+
+        
     #
     def list(self, page=0, itemsInPage=20):
         
