@@ -1,12 +1,6 @@
 from flask import jsonify
 from flask import request
 from flask_restplus import Namespace, Resource, fields
-from flask_jwt_extended import (
-    jwt_required, create_access_token,
-    jwt_refresh_token_required, create_refresh_token,
-    get_jwt_identity, set_access_cookies, get_raw_jwt,
-    set_refresh_cookies, unset_jwt_cookies
-)
 from usertable import UserTable
 import ast
 

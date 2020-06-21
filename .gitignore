@@ -26,4 +26,4 @@ env.bak/
 !**/techengage
 
 # NGINX
-!**/nginx.conf
+!**/nginx.conf/
