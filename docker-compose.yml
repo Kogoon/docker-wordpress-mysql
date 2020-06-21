@@ -21,7 +21,6 @@ services:
       - backend
     links:
       - mysql
-      - redis
 
   wordpress:
     depends_on:
@@ -68,14 +67,6 @@ services:
       - wordpress
       - api
 
-  redis:
-    image: redis:alpine
-    container_name: 'REDIS'
-    environment:
-      TZ: 'Asia/Seoul'
-    networks:
-      - backend
-  
   mysql:
     restart: always
     image: mysql:${MYSQL_VERSION}
