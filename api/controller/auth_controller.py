@@ -7,7 +7,7 @@ from flask_jwt_extended import (
         set_refresh_cookies, unset_jwt_cookies
 )
 from .user_controller import resource_user
-from .user_controller import add_user
+#from .user_controller import add_user
 from usertable import UserTable
 from wp import *
 
@@ -23,7 +23,25 @@ resource_auth = api.model('Auth', {
 uaParser = api.parser()
 uaParser.add_argument('user_pass', type=str, help='user password', location='query')
 
+luParser = api.parser()
+luParser.add_argument('page', type=int, help='Page number', location='query')
+luParser.add_argument('itemsInPage', type=int, help='Number of Items in a page', location='query')
 
+
+#
+@api.route('/users')
+class Users(Resource):
+
+    @api.expect(luParser)
+    @api.expect(resource_auth)
+    @api.response(200, 'Success')
+    @api.response(400, 'Validation Error')
+    def get(self):
+        ''' admin 계정으로 사용자 정보를 리스트로 보여주며 페이지 기능을 제공한다. '''
+        return list_users()
+
+
+#
 @api.route('/signin/<user_login>')
 class Signin(Resource):
 
@@ -47,15 +65,7 @@ class Signin(Resource):
         return get_auth(user_login, j.get('user_pass'))
 
 
-@api.route('/signup')
-class Signup(Resource):
-
-    @api.response(200, 'Success')
-    @api.response(400, 'Validation Error')
-    def post(self):
-        ''' 사용자 인증정보를 등록한다. '''
-        return add_user()
-
+#
 @api.route('/user/<user_login>')
 @api.doc(params={'user_login':'This is a userID for signIn(login'})
 class User(Resource):
@@ -76,6 +86,22 @@ class User(Resource):
         pass
 
 
+#
+def list_users():
+
+    page = int(request.args.get('page', "0"))
+    np   = int(request.args.get('itemsInPage', "20"))
+
+    db = UserTable()
+    res = db.list(page=page, itemsInPage=np)
+
+    result = {
+            "users" : "{}".format(res),
+            "count" : len(res),
+            "page"  : page
+        }
+
+    return result
 #
 def get_user(user_login):
 
@@ -100,15 +126,9 @@ def update_user(user_login):
     j = request.get_json()
     db = UserTable()
     result = db.update(user_login, j)
-    result = {"message":"ok"} if result if None else result
+    result = {"message":"ok"} if result is None else result
 
-    response = app.response_class(
-            response=json.dumps(result),
-            status=200,
-            mimetype='application/json'
-        )
-
-    return response
+    return result
 
 
 #
@@ -118,13 +138,7 @@ def delete_user(user_login):
     result = db.delete(user_login)
     result = {"message":"ok"} if result is None else result
 
-    response = app.response_class(
-            response=json.dumps(result),
-            status=200,
-            mimetype='application/json'
-        )
-
-    return response
+    return result
 
 
 #

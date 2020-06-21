@@ -10,6 +10,10 @@ services:
       - TZ=Asia/Seoul
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - PYTHON_DB_HOST=${PYTHON_DB_HOST}
+      - PYTHON_DB_USER=${PYTHON_DB_USER}
+      - PYTHON_DB_PASSWORD=${PYTHON_DB_PASSWORD}
+      - PYTHON_DB_DATABASE=${PYTHON_DB_DATABASE}
     ports:
       - '5000:5000'
     networks:

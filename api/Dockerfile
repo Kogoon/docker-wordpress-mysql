@@ -15,13 +15,12 @@ WORKDIR /api
 # /app to Python
 ENV PYTHONPATH=/api
 ENV TZ=Asia/Seoul
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 EXPOSE 5000
 
 # install Flask and pymysql ( for mysql in flask)
 RUN pip3 install flask flask_restplus pymysql requests Werkzeug==0.16.1 \
-        cffi cryptography Flask-Bcrypt flask_jwt_extended redis
+        cffi cryptography Flask-Bcrypt flask_jwt_extended redis pytz
 
 ENTRYPOINT ["python3"]
 

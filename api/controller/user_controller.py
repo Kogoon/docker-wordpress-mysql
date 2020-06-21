@@ -8,40 +8,34 @@ from flask_jwt_extended import (
     set_refresh_cookies, unset_jwt_cookies
 )
 from usertable import UserTable
-from user_cache import UserCache
 import ast
 
 
 api = Namespace('User', description="APIs for Users")
 
 resource_user = api.model('User', {
-    'id': fields.Integer(description='wp_users user id auto_increment'),
+    #'id': fields.Integer(description='wp_users user id auto_increment'),
     'user_login': fields.String(description='The user_login for signin', required=True),
     'user_pass': fields.String(description='The user_pass for signin', required=True),
     'user_nicename': fields.String(description='The user\'s nickname', required=True),
     'user_email': fields.String(description='The user\'s email', required=True),
-    'user_url': fields.String(description='The url setting by user', required=False),
-    'user_registered': fields.String(description='The registered time yyyy-mm-dd hh-mm-ss', required=False),
+    #'user_url': fields.String(description='The url setting by user', required=False),
+    #'user_registered': fields.String(description='The registered time yyyy-mm-dd hh-mm-ss', required=False),
     'display_name': fields.String(description='The user visible display name', required=True)
     })
 
-luParser = api.parser()
-luParser.add_argument('page', type=int, help='page number', location='query')
-luParser.add_argument('itemsInPage', type=int, help='Number of Items in a page', location='query')
-
 
 #
 #
-#
-@api.route('/users')
-class Users(Resource):
+@api.route('/signup')
+class Signup(Resource):
 
-    @api.expect(luParser)
+    @api.expect(resource_user, validate=False)
     @api.response(200, 'Success')
     @api.response(400, 'Validation Error')
-    def get(self):
-        ''' 사용자 정보를 리스트로 보여주며 페이지 기능을 제공한다.  '''
-        return list_users()
+    def post(self):
+        ''' 사용자를 등록한다. '''
+        return add_user()
 
 
 #
@@ -55,30 +49,5 @@ def add_user():
     db = UserTable()
     result = db.insert(j)
     result = {"message":"ok"} if result is None else result
-
-    response = app.response_class(
-            response=json.dumps(result),
-            status=200,
-            mimetype='application/json'
-    )
-
-    return response
-
-
-#
-#LIST 예제
-#@app.route('/users', methods=['GET'])
-def list_users():
-    page = int(request.args.get('page', "0"))
-    np = int(request.args.get('itemsInPage', "20"))
-
-    db = UserTable()
-    res = db.list(page=page, itemsInPage=np)
-
-    result = {
-            "users" : "{}".format(res),
-            "count" : len(res),
-            "page"  : page
-    }
 
     return result

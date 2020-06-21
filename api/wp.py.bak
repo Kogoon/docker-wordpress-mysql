@@ -37,38 +37,37 @@ def encode64(textInput,count):
     return output
 
 
-def crypt_private(plainText, wordpressHash=None):
-    if not wordpressHash:
-        # generate new salt:
-        wordpressHash = '$P$' + random.choice(itoa64[10:14])
-        for i in range(8):
-            wordpressHash += random.choice(itoa64)
-
+def crypt_private(password, setting=None):
+	
     output = '*0' # old type | not supported yet
-    if wordpressHash[0:2] == output:
+    if setting[0:2] == output:
         output = '*1'
-    if wordpressHash[0:3] != '$P$': # old type | not supported yet
+    id = setting[0:3]
+    if id != '$P$' and id != '$H$': # old type | not supported yet
         return output
 
     # get who many times will generate the hash
-    count_log2 = itoa64.find(wordpressHash[3])
+    count_log2 = itoa64.find(setting[3])
+    
     if (count_log2 < 7) or (count_log2 > 30):
         return output
 
     count = 1 << count_log2 # get who many times will generate the hash
-
-    salt = wordpressHash[4:12] # get salt from the wordpress hash
+    
+    salt = setting[4:12] # get salt from the wordpress hash
     if len(salt) != 8:
         return output
     # generate the first hash from salt and word to try
-    plainTextHash = md5(str(salt)+str(plainText)).digest()
+
+    _hash = md5(str.encode(str(salt)+str(password))).digest()
+    
     for i in range (count):
         # regenerate the hash
-        plainTextHash = md5(str(plainTextHash)+str(plainText)).digest()
-
-    output = wordpressHash[0:12]
+        _hash = md5(_hash + str.encode(password)).digest()
+    output = setting[0:12]
     # get the first part of the wordpress hash (type,count,salt)
-    output = output + encode64(plainTextHash,16) # create the new hash
+    output = output + encode64(_hash,16) # create the new hash
+
     return output
 
 
