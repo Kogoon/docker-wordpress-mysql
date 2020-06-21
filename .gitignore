@@ -1,7 +1,8 @@
 README.md/
 
 # Python
-
+/api/controller/__pycache__/
+**/__pycache__/
 
 # Environment
 .env
@@ -20,6 +21,6 @@ env.bak/
 
 
 # wordpress theme & plugin
-!wordpress/wp-content/plugins/google-site-kit/
-!wordpress/wp-content/plugins/simple-google-recaptcha/
-!wordpress/wp-content/themes/techengage
+!wordpress/**/google-site-kit/
+!wordpress/**/simple-google-recaptcha/
+!wordpress/**/techengage
