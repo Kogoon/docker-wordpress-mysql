@@ -49,7 +49,7 @@ services:
       - .env
     ports:
       - '80:80'
-      - '443:443'
+        #- '443:443'
     volumes:
       - ${NGINX_CONF_DIR}:/etc/nginx/conf.d 
       - ${NGINX_LOG_DIR}:/var/log/nginx
@@ -60,10 +60,13 @@ services:
       - frontend
     depends_on:
       - wordpress
+      - api
 
   redis:
     image: redis:alpine
     container_name: 'REDIS'
+    environment:
+      TZ: 'Asia/Seoul'
     networks:
       - backend
   
