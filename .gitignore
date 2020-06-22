@@ -16,7 +16,7 @@ env.bak/
 /mysql/
 /config/
 /logs/
-#/wordpress/
+/wordpress/
 
 
 # wordpress theme & plugin
