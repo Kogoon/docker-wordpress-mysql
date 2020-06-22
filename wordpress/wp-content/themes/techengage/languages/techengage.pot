@@ -1,0 +1,177 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: techengage\n"
+"POT-Creation-Date: 2018-03-15 11:47+0500\n"
+"PO-Revision-Date: 2017-12-20 09:37+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_x;_ex;_nx;esc_attr__;"
+"esc_attr_e;esc_attr_x;esc_html__;esc_html_e;esc_html_x\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "4"
+msgstr ""
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:25
+msgid "Go Back"
+msgstr ""
+
+#: comments.php:30
+#, php-format
+msgid "One Comments &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:39 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:42 comments.php:63
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:43 comments.php:64
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:55 page.php:24 single.php:47
+msgid "Pages:"
+msgstr ""
+
+#: footer.php:27
+#, php-format
+msgid "Powered by %1$s"
+msgstr ""
+
+#: functions.php:67
+msgid "Primary menu"
+msgstr ""
+
+#: functions.php:126
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:136
+msgid "Footer Widget Area"
+msgstr ""
+
+#: functions.php:163
+msgid "Read More"
+msgstr ""
+
+#: functions.php:175
+msgid "Read More &raquo;"
+msgstr ""
+
+#: header.php:47
+msgid "Toggle Navigation"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:7
+msgid "Footer Social Icon Settings"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:12
+msgid "Social Link"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:23
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:34
+#: inc/customize/customize_copyright.php:55
+#: inc/customize/customize_copyright.php:77
+#: inc/customize/customize_copyright.php:99
+msgid "Open Link New tab/window"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:44
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:65
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/customize/customize_copyright.php:87
+msgid "Google-plus URL"
+msgstr ""
+
+#: inc/template-tags.php:28
+#, php-format
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:33
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:50 inc/template-tags.php:56
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:52
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:58
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:71
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:26
+msgid "Not Found"
+msgstr ""
+
+#: search.php:28
+msgid "Sorry, Do Not match."
+msgstr ""
+
+#: searchform.php:3
+msgid "type to search"
+msgstr ""

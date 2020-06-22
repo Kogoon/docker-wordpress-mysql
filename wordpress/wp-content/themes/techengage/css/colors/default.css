@@ -1,0 +1,1407 @@
+/*Top Detail */
+.techengage-head-detail {
+    background: #303f9f;
+	color: #fff;
+}
+.techengage-head-detail .info-left li a, .techengage-head-detail li a i, .techengage-head-detail .info-right li a {
+    color: #fff;
+}
+
+/*==================== Theme Menu ====================*/
+/*=== navbar Header colors ===*/
+.navbar-wp {
+	background: #1396AA;
+}
+.navbar-header .navbar-brand {
+	color: white;
+}
+/*=== navbar hover colors ===*/
+.navbar-wp .navbar-nav > li > a {
+	color: white;
+}
+.navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus {
+	color: white;
+	background-color: #3A3A3A;
+}
+.navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus {
+	color: white;
+	border-color: #fff;
+	background-color: #1396AA;
+	transition: 0.3s;
+}
+/*=== navbar dropdown colors ===*/ 
+.navbar-wp .dropdown-menu {
+	background: #1396AA;
+}
+.navbar-wp .dropdown-menu > li > a {
+	color: white;
+}
+.navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > .active > a:focus {
+	background: black;
+	color: white;
+}
+.navbar-wp .dropdown-menu > li > a:hover {
+	background: black;
+	transition: 0.3s;
+}
+.navbar-wp .navbar-nav > .disabled > a {
+	color: #ccc;
+}
+.navbar-wp .navbar-nav > .disabled > a:hover {
+	color: #ccc;
+}
+.navbar-wp .navbar-nav > .disabled > a:focus {
+	color: #ccc;
+}
+.navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
+	background: rgba(0,0,0,0);
+	border-color: rgba(0,0,0,0);
+	color: #fff;
+}
+.techengage-search-box .techengage-search .btn {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+
+/*=== navbar drop down hover color ===*/
+.navbar-base .navbar-nav > .open > a, .navbar-base .navbar-nav > .open > a:hover, .navbar-base .navbar-nav > .open > a:focus {
+	color: #fff;
+}
+.navbar-base .navbar-nav > li > a.dropdown-form-toggle {
+	color: #fff;
+}
+.navbar-wp .navbar-nav > li > ul::before {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #3f51b5;
+}
+/*=== navbar text color ===*/ 
+.navbar-default .navbar-toggle {
+	background: rgba(0,0,0,0);
+	color: #fff;
+	border-color: rgba(0,0,0,0);
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #212121;
+}
+
+.navbar-wp .navbar-nav > li > a.dropdown-form-toggle {
+	color: #fff;
+}
+/*==================== slider ====================*/
+.techengage-slider-warraper .techengage-slider-inner h1 {
+	color: #fff;
+}
+.techengage-slider-warraper .techengage-slider-inner h1 span {
+	color: #3f51b5;
+}
+.techengage-slider-warraper .techengage-slider-inner h3 {
+	color: #fff;
+}
+.techengage-slider-warraper .techengage-slider-inner p {
+	color: #fff;
+}
+.techengage-slider-warraper .techengage-slider-inner p span {
+	color: #3f51b5;
+}
+.techengage-slider-warraper .owl-controls .owl-buttons div {
+	background: #fff;
+	color: #3f51b5;
+	border-color: #fff;
+}
+.techengage-slider-warraper .owl-controls .owl-buttons div:hover {
+	background: #3f51b5;
+	color: #fff;
+	border-color: #3f51b5;
+}
+.techengage-slider-warraper .owl-controls.clickable .owl-page:hover span {
+	background: #3f51b5;
+}
+.techengage-slider-warraper .owl-controls .owl-page.active span {
+	background: #3f51b5;
+}
+.techengage-slider-warraper .owl-controls .owl-page span {
+	background: #fff;
+}
+.techengage-slider-warraper .owl-controls .owl-page span.owl-numbers {
+	color: #fff;
+}
+.btn.btn-tislider {
+	background: #fff;
+	border-color: #fff;
+	color: #3f51b5;
+}
+.btn.btn-tislider:hover, .btn.btn-tislider:focus {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.btn.btn-tislider-two {
+	background: #349BD6;
+	color: #fff;
+	border-color: #349BD6;
+}
+.btn.btn-tislider-two:hover, .btn.btn-tislider-two:focus {
+	background: #161c28;
+	border-color: #161c28;
+	color: #fff;
+}
+
+.btn{background: #349BD6;}
+.btn:hover, .btn-theme:focus {
+    background: #1a2128;
+    color: #fff;
+}
+/*==================== service ====================*/
+.techengage-service-inner {
+	background: rgba(0,0,0,0.65);
+}
+.techengage-service {
+	border-color: #eee;
+}	
+.techengage-service:hover h3 {
+	color: #fff;
+}
+.techengage-service:hover p {
+	color: #fff;
+}
+.techengage-service:hover a {
+	color: #fff;
+}
+.techengage-service-inner h3, .techengage-service p {
+	color: #fff;
+}
+.techengage-service:hover .techengage-service-inner h3 span {
+	color: #fff;
+}
+.techengage-service-inner h3 span {
+	color: #3f51b5;
+}
+
+/*==================== calltoaction ====================*/
+.techengage-calltoaction {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-calltoaction h5 {
+	color: #fff;
+}
+.techengage-calltoaction .btn-theme {
+	border-color: #1a2128;
+	color: #fff;
+	background: #1a2128;
+}
+.techengage-calltoaction .btn-theme:hover, .techengage-calltoaction .btn-theme:focus {
+	border-color: #3f51b5;
+	background: #3f51b5;
+}
+/*==================== featured products ====================*/
+#product .techengage-product a .onsale {
+    background: #4caf50;
+    color: #fff;
+}
+#product .techengage-product a .price {
+    color: #000;
+}
+#product .techengage-product a .price ins {
+    color: #e96656;
+}
+#product .techengage-product a.button {
+	background: #3f51b5;
+	color: #fff;
+}
+#product .techengage-product a.button:hover, #product .techengage-product a.button:focus  {
+	background: #161c28;
+	color: #fff;
+}
+#feature-product .owl-controls .owl-buttons div {
+	background: #fff;
+	border-color: #fff;
+}
+#feature-product .owl-controls .owl-buttons div:hover {
+	background: #3f51b5;
+	color: #fff;
+}
+#feature-product .owl-page.active { 
+	background: #3f51b5;
+}
+#feature-product .owl-page {
+	background: rgba(0,0,0,0.6);
+}
+/*==================== callout ====================*/
+.techengage-callout .overlay {
+	background: rgba(0, 5, 8, 0.90);
+}
+.techengage-callout h3.techengage-heading-inner, .techengage-callout, .techengage-callout h1, .techengage-callout h3 {
+	color: #fff;
+}
+.techengage-callout .overlay h3 span {
+	color: #3f51b5;
+}
+/*==================== testimonials ====================*/
+.testimonials-section .overlay {
+	background: #fff;
+}
+.testimonials-section .testimonials_qute:hover {
+	background: #3f51b5;
+}
+.testimonials-section .testimonials_qute:hover .sub-qute {
+	color: #fff;
+}
+.testimonials-section .testimonials_qute:hover .user-title {
+	color: #fff;
+}
+.testimonials-section .sub-qute {
+	color: #757575;
+}
+
+.testimonials-section .sub-qute p {
+	color: #757575;
+}
+.content-testimonials .icon-quote {
+	color: #BDBDBD;
+}
+.testimonials-section .user-designation {
+	color: #757575;
+}
+.testimonials-section .user-title {
+	color: #212121;
+}
+.testimonials-section .techengage-client img {
+	border-color: #3f51b5;
+}
+.testimonials-section .techengage-client::before {
+	background: #fff;
+	color: #3f51b5;
+}
+.testimonials-section .user-title::before {
+	background-color: #212121;
+}
+#techengage-testimonial .owl-controls .owl-buttons div {
+	background: #fff;
+	color: #000;
+	border-color: #fff;
+}
+#techengage-testimonial .owl-controls .owl-buttons div:hover {
+	color: #fff;
+	border-color: #3f51b5;
+	background: #3f51b5;
+}
+#techengage-testimonial .owl-page {
+	background: #fff;
+}
+#techengage-testimonial .owl-page.active { 
+	background: #3f51b5;
+}
+/*==================== blog ====================*/
+.techengage-blog-date {
+	background: #349BD6;
+	color: #fff;
+}
+.techengage-blog-date span {
+	color: #fff;
+}
+.techengage-blog-post-box h2 a {
+	color: #1c1f24;
+}
+.techengage-blog-category a:hover, .techengage-blog-category a:focus {
+	color: #3f51b5;
+}
+.techengage-comments .reply a:hover {
+	color: #3f51b5;
+}
+.btn-blog {
+	border-color: #e1e1e1;
+	color: #999;
+}
+.btn-blog:hover {
+	background: #3f51b5;
+	color: #fff;
+}
+.btn-blog:hover {
+	border-color: #3f51b5;
+}
+.techengage-comments .techengage-reply {
+	border-color: #f0f0f0;
+}
+.comments-area footer a:hover {
+	color: #212121;
+}
+.techengage-blog-category a {
+	color: #349BD6;
+}
+.techengage-blog-category i {
+	color: #888;
+}
+.techengage-blog-post-box .small > p {
+	color: black;
+}
+.techengage-blog-post-box input[type="checkbox"], .techengage-blog-post-box input[type="radio"] {
+    display: inline;
+}
+.techengage-blog-post-box table, .techengage-blog-post-box th, .techengage-blog-post-box td {
+    border: 1px solid #d1d1d1;
+}
+.techengage-blog-post-box table{
+	 border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 1.75em;
+    table-layout: fixed;
+    width: 100%;
+}
+.techengage-blog-post-box th {
+    border-width: 0 1px 1px 0;
+    font-weight: 700;
+}
+.techengage-blog-post-box th, .techengage-blog-post-box td {
+    padding: 0.4375em;
+}
+.techengage-blog-post-box td {
+    border-width: 0 1px 1px 0;
+}
+.techengage-blog-author {
+	background: #e8e8e8;
+}
+.techengage-info-author-block {
+	color: #999;
+}
+.techengage-info-author-block a {
+	color: #349BD6;
+	font-weight: 600;
+}
+.techengage-info-author-block h4 {
+	color: #333;
+}
+.techengage-info-author-block h4 span {
+	color: #999999;
+}
+.techengage-info-author-block .techengage-info-author-social li a {
+	color: #dbdbdb;
+}
+.techengage-info-author-block .techengage-info-author-social li a:hover {
+	color: #777;
+}
+.comment_section .comment-reply-link {
+	background: #f6f6f6;
+	color: #212121;
+	border-color: #f6f6f6;
+}
+.techengage-comments a {
+	color: #777;
+}
+.techengage-comments h4 {
+	color: #888;
+}
+.techengage-comments h4 span {
+	color: #999;
+}
+.techengage-comments .comment .media-body > p:last-child {
+	border-color: #eee;
+}
+.techengage-comments li .media-body > .small {
+	color: #999;
+}
+.techengage-comments li .media-body > p {
+	border-color: #f0f0f0;
+	color: #999;
+}
+.techengage-comments .comment-list li {
+	background: #fff;
+	border-color: #eee;
+}
+.techengage-heading-bor-bt h5::before {
+	border-color: #3f51b5;
+}
+.techengage-heading-bor-bt h5::before {
+	border-bottom-color: #3f51b5;
+}
+/*==================== client ====================*/
+.techengage-clients-section {
+	background: #fff;
+}
+.techengage-clients-section .item {
+	color: #fff;
+}
+#techengage-client .owl-controls .owl-buttons div {
+	background: #fff;
+	color: #000;
+	border-color: #fff;
+}
+#techengage-client .owl-controls .owl-buttons div:hover {
+	color: #fff;
+	border-color: #3f51b5;
+	background: #3f51b5;
+}
+#techengage-client .owl-page.active { 
+	background: #3f51b5;
+}
+#techengage-client .owl-page {
+	background: #fff;
+}
+/*==================== subscriber ====================*/
+.techengage-subscriber .overlay {
+	background: rgba(32, 40, 48, 0.6);
+}
+.techengage-subscriber .subscription-form .int-box {
+	color: #ccc;
+}
+.techengage-subscriber h4 {
+	color: #fff;
+}
+.techengage-subscriber h2 {
+	color: #fff;
+}
+.techengage-subscriber h4 span, .techengage-subscriber h2 span {
+	color: #3f51b5;
+}
+.techengage-subscriber a {
+	color: #fff;
+}
+/*==================== funfact ====================*/ 
+.techengage-funfact .overlay {
+	background: #fff;
+}
+.techengage-funfact .overlay h1 {
+	color: #fff;
+}
+.techengage-funfact .overlay h1 span {
+	color: #3f51b5;
+}
+.techengage-funfact-inner {
+	border-color: #eee;
+	background: #fff;
+}
+.techengage-funfact-inner:hover {
+	border-color: #3f51b5;
+}
+.techengage-funfact-inner .tittle {
+	color: #212121;
+}
+.techengage-funfact h3.techengage-heading-inner, .techengage-funfact h3 {
+	color: #212121;
+}
+.techengage-funfact-inner i {
+	color: #3f51b5;
+}
+.techengage-funfact .overlay p {
+	color: #757575;
+}
+/*==================== feature & skills  ====================*/ 
+.techengage-feature {
+	background: #fff;
+}
+.techengage-feature-box-icon i {
+	background: #fff;
+	color: #3f51b5;
+}
+.techengage-feature-box:hover .techengage-feature-box-icon i {
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+}
+.techengage-feature-box-info h4 {
+	color: #fff;
+}
+.techengage-feature-box-info p {
+	color: #fff;
+}
+.techengage-skills {
+	background: #3f51b5;
+}
+.techengage-skills-card-box { 
+	background: rgba(0,0,0,0.2);
+}
+.techengage-skills h5 {
+	color: #fff;
+}
+.techengage-skills h6 {
+	color: #fff;
+}
+.techengage-skills .progress-bar-theme {
+ 	background-color: #3f51b5;
+	color: #fff;
+}
+/*==================== team  ====================*/
+.techengage-team-section {
+	background: #f9f9f9;
+}
+.techengage-team-info {
+	color: #757575;
+	background: #fff;
+}
+.techengage-team-box:hover .techengage-team-info {
+	color: #fff;
+	background: #3f51b5;
+}
+.techengage-team-box:hover .techengage-team-info h3 {
+	color: #fff;
+}
+.techengage-team-info h3 {
+	color: #212121;
+}
+.techengage-team-info .designation {
+	color: #fff;
+}
+.techengage-team-social a {
+	color: #212121;
+	background: #fff;
+}
+.techengage-team-social a:hover {
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+}
+.techengage-team-box {
+	border-color: #eee;
+}
+.techengage-team-box .inner-bottom {
+	border-color: #eee;
+}
+.techengage-team-box .inner-bottom .team-btn{
+	background: #3f51b5;
+	color: #fff;
+}
+/*==================== portfolio  ====================*/
+
+.techengage-portfolio-box .techengage-portfolio-box-caption {
+	color: #fff;
+}
+.techengage-portfolio-box .techengage-portfolio-box-caption h3 {
+    color: #ffffff;
+}
+.techengage-portfolio-box .techengage-portfolio-box-caption h3 a:hover {
+    color: #333333;
+}
+.techengage-portfolio-box .techengage-portfolio-box-caption h6 {
+    color: #fff;
+}
+.techengage-portfolio-box .overlay .btn {
+	background: #fff;
+	color: #3f51b5;
+}
+.techengage-portfolio-box .overlay .btn:hover, .techengage-portfolio-box .overlay .btn:focus {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-link-caption a, .techengage-link-caption i {
+	color: #fff;
+}
+.techengage-portfolio-box h4, .techengage-portfolio-box h4 a {
+	color: #212121;
+}
+.techengage-portfolio-box h4:hover, .techengage-portfolio-box h4 a:hover, .techengage-portfolio-box h4:focus, .techengage-portfolio-box h4 a:focus {
+	color: #3f51b5;
+}
+.techengage-portfolio-box .techengage-portfolio-box-caption .techengage-portfolio-box-caption-content .techengage-project-category a {
+	color: #fff;
+}
+.techengage-portfolio-box .techengage-portfolio-box-caption::after {
+    background: #3f51b5;
+}
+#portfolio .owl-controls .owl-buttons div {
+	background: #fff;
+	color: #000;
+	border-color: #fff;
+}
+#portfolio .owl-controls .owl-buttons div:hover {
+	color: #fff;
+	border-color: #3f51b5;
+	background: #3f51b5;
+}
+#portfolio .owl-page {
+	background: #fff;
+}
+#portfolio .owl-page.active { 
+	background: #3f51b5;
+}
+.techengage-view-detail-content {
+	background: #fff;
+	color: #757575;
+}
+/*==================== plans  ====================*/
+.techengage-plans .overlay {
+	background: rgba(245,245,245,1);
+}
+.techengage-plans .techengage-plan header {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-plan-features {
+	background: #fff;
+	border-color: #e6e9ed;
+}
+.techengage-plans .techengage-plan .techengage-pupular-ribbon {
+	background-color: #32c5d2;
+	color: #fff;
+}
+.techengage-plans .techengage-plan .techengage-new-ribbon {
+	background-color: #4caf50;
+	color: #fff;
+}
+.techengage-plans .techengage-plan .techengage-upcoming-ribbon {
+	background-color: #e64a19;
+	color: #fff;
+}
+.techengage-plan-price .techengage-currency, .techengage-plan-price .techengage-period {
+	color: #fff;
+}
+.techengage-plans .techengage-plan h2 {
+	background: #fff;
+	color: #212121;
+}
+/*==================== req  ====================*/
+.techengage-req .overlay {
+	background: #3f51b5;
+}
+.techengage-req h5, .techengage-req p, .techengage-req a {
+	color: #fff;
+}
+.techengage-req .form-control {
+	background: rgba(0,0,0,0);
+	color: #fff;
+}
+/*==================== contact  ====================*/
+.techengage-contact .techengage-widget-address li span.icon-addr {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-contact .techengage-widget-address > li {
+	color: #959595;
+	border-color: #ebebeb;
+}
+.techengage-contact .techengage-widget-address li span.icon-addr i {
+	color: #fff;
+}
+/*==================== Body & Global ====================*/
+.wrapper {
+	background: white;
+}
+body {
+	background: white;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	color: #212121;
+}
+a {
+	color: #3f51b5;
+}
+blockquote {
+	border-color: #3f51b5;
+}
+.form-control {
+	border-color: #ebebeb;
+	color: #ccc;
+}
+.form-control:hover, .form-control:focus, .form-control:active {
+	border-color: #3f51b5;
+}
+.form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control::-webkit-input-placeholder {
+	color: #ccc;
+}
+textarea {
+	border-color: #ebebeb;
+}
+textarea:hover, textarea:focus {
+	border-color: #4A4A4A;
+}
+input:not([type]) {
+	border-color: #ebebeb;
+	color: #333333;
+}
+input:not([type]):hover, input:not([type]):focus {
+	border-color: #3f51b5;
+}
+input[type="text"] {
+	border-color: #ebebeb;
+	color: #333333;
+}
+input[type="text"]:hover, input[type="text"]:focus {
+	border-color: #349BD6;
+}
+input[type="email"] {
+	border-color: #ebebeb;
+	color: #ccc;
+}
+input[type="email"]:hover, input[type="email"]:focus {
+	border-color: #349BD6;
+}
+input[type="number"] {
+	border-color: #ebebeb;
+	color: #ccc;
+}
+input[type="number"]:hover, input[type="number"]:focus {
+	border-color: #349BD6;
+}
+input[type="password"] {
+	border-color: #ebebeb;
+	color: #ccc;
+}
+input[type="password"]:hover, input[type="password"]:focus {
+	border-color: #349BD6;
+}
+input[type="tel"] {
+	border-color: #ebebeb;
+	color: #ccc;
+}
+input[type="tel"]:hover, input[type="tel"]:focus {
+	border-color: #349BD6;
+}
+input[type="url"] {
+	border-color: #ebebeb;
+	color: #ccc;
+}
+input[type="url"]:hover, input[type="url"]:focus {
+	border-color: #349BD6;
+}
+input[type="reset"], input[type="submit"] {
+	background: #349BD6;
+	border-color: #349BD6;
+	color: #fff;
+}
+input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus { 
+	background: #1a2128;
+	border-color: #1a2128;
+	color: #fff;
+}
+select {
+	background-color: #fff;
+	border-color: #ebebeb;
+	color: #444;
+}
+select:hover, select:focus {
+	border-color: #3f51b5;
+}
+blockquote::before {
+	color: #d0d0d0;
+}
+button {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+button:hover, button:focus {
+	background: #1a2128;
+	border-color: #1a2128;
+	color: #fff;
+}
+.btn {
+	color: #fff;
+}
+.btn-theme {
+	background: #3f51b5;
+}
+.btn-theme:hover, .btn-theme:focus {
+	background: #1a2128;
+	color: #fff;
+}
+.btn-theme-two {
+	background: #fff;
+	border-color: #fff;
+	color: #3f51b5;
+}
+.btn-theme-two:hover, .btn-theme-two:focus {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.pagination > li > a {
+	color: #333;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.pagination > .active > span:hover, .pagination > .active > span:focus {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.pagination > li > a:hover, .pagination > li > a:focus {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.grey-bg {
+	background: #f9f9f9;
+}
+.techengage-error-404 h1 {
+	color: #3f51b5;
+}
+.techengage-search .btn-submit {
+	color: #fff;
+}
+/*---- alerts ----*/
+.alert-success, .text-success {
+	background-color: #2ac56c;
+	color: #fff;
+}
+.alert-info, .text-info {
+	background-color: #4593e3;
+	color: #fff;
+}
+.alert-danger, .text-danger {
+	background-color: #f06060;
+	color: #fff;
+}
+.alert-warning, .text-warning {
+	background-color: #fcd04b;
+	color: #fff;
+}
+.progress-bar-success {
+	background-color: #2ac56c;
+	color: #fff;
+}
+.progress-bar-info {
+	background-color: #4593e3;
+	color: #fff;
+}
+.progress-bar-danger {
+	background-color: #f06060;
+	color: #fff;
+}
+.progress-bar-warning {
+	background-color: #fcd04b;
+	color: #fff;
+}
+.subscription-success {
+	color: #2ac56c;
+}
+.subscription-error {
+	color: #f06060;
+}
+/*---- accordion-heading ----*/
+.techengage-accordion-heading {
+	background-color: #f5f5f5;
+	border-color: rgba(0,0,0,0.1);
+	color: #333;
+}
+.techengage-accordion-heading a {
+	color: #3f51b5;
+}
+.techengage-accordion-body {
+	border-color: #ccc;
+}
+/*---- heading ----*/
+.techengage-heading .techengage-heading-inner {
+	color: #333;
+}
+.techengage-heading h3 span {
+	color: #3f51b5;
+}
+/*---- breadcrumb ----*/
+.techengage-breadcrumb-title h1 {
+	color: #fff;
+}
+.techengage-page-breadcrumb > li + li:before {
+	color: #fff;
+}
+.techengage-page-breadcrumb > li a {
+	color: #fff;
+}
+.techengage-page-breadcrumb > li a:hover {
+	color: #3f51b5;
+}
+/*==================== sidebar & widgets ====================*/
+.techengage-sidebar {
+	border-color: #eee;
+} 
+.techengage-sidebar .techengage-widget h6, .techengage-sidebar .techengage-widget h2 {
+	color: #1c1f24;
+}
+.techengage-sidebar a {
+    color: #666;
+}
+.techengage-sidebar a:hover, .techengage-sidebar a:focus {
+	color: #3f51b5;
+}
+.techengage-sidebar .widget_search .btn {
+	color: #fff;
+}
+.techengage-sidebar .widget_search .btn:hover, .techengage-sidebar .widget_search .btn:focus {
+	background: #161c28;
+}
+.techengage-sidebar .techengage-category-widget ul li {
+	border-color: #f0f0f0;
+}
+.techengage-sidebar .techengage-widget ul li {
+	border-color: #f0f0f0;
+}
+
+.techengage-sidebar .techengage-widget .textwidget {
+	color: #969ea7;
+}
+.techengage-sidebar .techengage-widget-tags a, .techengage-sidebar .techengage-widget .tagcloud a {
+	background: #f0f0f0;
+	border-color: #f0f0f0;
+	color: #999;
+}
+.techengage-sidebar .techengage-widget-tags a:hover, .techengage-sidebar .techengage-widget .tagcloud a:hover {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.techengage-sidebar .calendar_wrap tbody #today {
+	background: #349BD6;
+	color: #fff;
+}
+.techengage-sidebar .calendar_wrap table tbody #today:hover {
+	background: #f1f1f1;
+	color: #333;
+}
+.techengage-sidebar .calendar_wrap table tbody td {
+	border-color: #ddd;
+	color: #999;
+}
+.techengage-sidebar .calendar_wrap table tbody td:hover {
+	background: #f1f1f1;
+	color: #333;
+}
+.techengage-sidebar .calendar_wrap table tbody td a {
+	color: #999;
+}
+.techengage-sidebar .calendar_wrap table tfoot {
+	background: #f5f5f5;
+	border-color: #ddd;
+	color: #333;
+}
+.techengage-sidebar .calendar_wrap table thead th {
+	border-color: #ddd;
+	color: #969ea7;
+}
+.techengage-sidebar .calendar_wrap table caption {
+	background: #eee;
+	border-color: #ddd;
+}
+
+.techengage-sidebar .techengage-widget .techengage-social li span.icon-soci {
+	background: rgba(0,0,0,0);
+}
+.techengage-sidebar .techengage-widget .techengage-social li span.icon-soci:hover {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+.techengage-sidebar .techengage-widget .techengage-social li span.icon-soci:hover i {
+	color: #fff;
+}
+.techengage-sidebar .techengage-widget .techengage-widget-address li span.icon-addr {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-sidebar .widget_product_search .btn {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-sidebar .techengage-mailchimp-widget .btn {
+	background: #3f51b5;
+	color: #fff;
+}
+.techengage-sidebar .techengage-mailchimp-widget .btn:hover, .techengage-sidebar .techengage-mailchimp-widget .btn:focus {
+	background: #161c28;
+}
+.techengage-sidebar .techengage-widget .techengage-twitter-feed li {
+	color: #969ea7;
+}
+.techengage-sidebar .techengage-widget .techengage-twitter-feed li a {
+	color: #3f51b5;
+}
+.techengage-sidebar .techengage-widget .techengage-social li a {
+	color: #3f51b5;
+}
+
+/*==================== footer & widgets ====================*/
+footer .techengage-footer-copyright p, footer .techengage-footer-copyright a {
+	color: white;
+}
+footer .techengage-footer-copyright a:hover, footer .techengage-footer-copyright a:focus {
+	color: grey;
+}
+footer .techengage-widget h6 {
+	color: #fff;
+}
+footer a {
+	color: #969ea7;
+}
+footer a:hover, footer a:focus {
+	color: #fff;
+}
+footer p {
+	color: #969ea7;
+}
+footer .techengage-widget ul li {
+	border-color: #969ea7;
+	color: #fff;
+}
+footer .techengage-widget ul li a:hover {
+	color: #fff;
+}
+footer .techengage-widget .list-unstyled li {
+	border-color: #969ea7;
+}
+footer .techengage-widget .list-unstyled li a {
+	color: #969ea7;
+}
+footer .techengage-widget .list-unstyled li a:hover {
+	color: #fff;
+}
+footer .techengage-widget .techengage-widget-tags a, footer .techengage-widget .tagcloud a {
+	border-color: #969ea7;
+	color: #969ea7;
+}
+footer .techengage-widget .techengage-widget-tags a:hover, footer .techengage-widget .tagcloud a:hover {
+	background: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+footer .calendar_wrap caption {
+	background: #eee;
+	border-color: #969ea7;
+}
+footer .calendar_wrap tbody #today {
+	background: #3f51b5;
+}
+footer .calendar_wrap table thead th {
+	border-color: #969ea7;
+}
+footer .calendar_wrap a {
+	color: #fff;
+}
+footer .techengage-widget .calendar_wrap table thead th {
+	color: #969ea7;
+}
+footer .calendar_wrap table tbody #today {
+	color: #fff;
+}
+footer .calendar_wrap table tbody #today:hover {
+	background: #f1f1f1;
+	color: #333;
+}
+footer .calendar_wrap table tbody td {
+	color: #fff;
+}
+footer .calendar_wrap table tbody td:hover {
+	background: #f1f1f1;
+	border-color: #ddd;
+	color: #333;
+}
+footer .techengage-widget .calendar_wrap table tfoot, footer .techengage-widget .calendar_wrap table tfoot a {
+	color: #333;
+}
+footer .calendar_wrap table tfoot {
+	background: #f5f5f5;
+	border-color: #ddd;
+}
+footer .techengage-calendar a:hover {
+	color: #969ea7;
+}
+footer .techengage-calendar thead th {
+	color: #969ea7;
+}
+footer .techengage-calendar a {
+	color: #fff;
+}
+footer .techengage-calendar tbody td {
+	color: #fff;
+}
+footer .techengage-calendar tbody #today {
+	color: #fff;
+}
+footer .techengage-calendar tbody #today:hover {
+	color: #333;
+}
+footer .techengage-calendar tbody td:hover {
+	color: #333;
+}
+footer .techengage-calendar tfoot {
+	color: #333;
+}
+footer .techengage-calendar tfoot a {
+	color: #333;
+}
+footer .techengage-widget .textwidget {
+	color: #969ea7;
+}
+footer .techengage-blog-post span {
+	color: #969ea7;
+}
+footer .techengage-widget .techengage-social li span.icon-soci {
+	background: rgba(0,0,0,0);
+	border-color: #969ea7;
+	color: #969ea7;
+}
+footer .techengage-widget .techengage-social li span.icon-soci:hover {
+	background-color: #3f51b5;
+	border-color: #3f51b5;
+	color: #fff;
+}
+footer .techengage-widget .techengage-social li span.icon-soci:hover i {
+	color: #fff;
+}
+footer .techengage-widget .techengage-widget-address li {
+	color: #969ea7;
+}
+footer .techengage-widget .techengage-widget-address li span.icon-addr {
+	background: #3f51b5;
+	color: #fff;
+}
+footer .techengage-widget .techengage-opening-hours li {
+	color: #969ea7;
+}
+footer .techengage-widget .techengage-opening-hours li:hover {
+	color: #fff;
+}
+footer .techengage-widget .techengage-twitter-feed li {
+	color: #969ea7;
+}
+footer .techengage-widget .techengage-twitter-feed li a {
+	color: #3f51b5;
+}
+footer .techengage-widget .form-control {
+	background: rgba(0,0,0,0);
+	border-color: #969ea7;
+}
+footer .techengage-widget .techengage-widget-quote .form-control {
+	background: #1a2128;
+	color: #969ea7;
+}
+footer .techengage-widget-tollfree li a {
+	color: #969ea7;
+}
+footer .techengage-widget-tollfree li i {
+	color: #969ea7;
+}
+footer .techengage-widget-payment a {
+	color: #969ea7;
+}
+footer .wpcf7-form p {
+	color: #969ea7;
+}
+footer .techengage-widget .wpcf7-form .wpcf7-form-control {
+	background: #1a2128;
+	color: #969ea7;
+}
+footer .techengage-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
+	color: #fff;
+}
+footer .techengage-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit:hover {
+	background: #1a2128;
+}
+footer .techengage-widget.widget_search .btn {
+	border-color: black;
+	background-color: black;
+}
+footer .techengage-widget.widget_search .btn:hover, footer .techengage-widget.widget_search .btn:focus {
+	background: #161c28;
+	border-color: #161c28;
+	color: #fff;
+}
+footer .techengage-mailchimp-widget .btn {
+	background: #3f51b5;
+}
+footer .widget_rss {
+	color: #fff;
+}
+footer .techengage-widget .techengage-subscribe {
+	border-color: #3f51b5;
+}
+footer .techengage-widget .techengage-subscribe:hover, footer .techengage-widget .techengage-subscribe:focus {
+	background: #161c28;
+	border-color: #161c28;
+	color: #fff;
+}
+footer .techengage-widget-payment a:hover {
+	color: #fff;
+}
+footer .widget_product_search .btn {
+	color: #fff;
+}
+footer .techengage-widget .techengage-search-widget .btn:hover, footer .techengage-widget .techengage-search-widget .btn:focus {
+	color: #fff;
+}
+footer .techengage-footer-widget-area {
+	border-top-color: rgba(225,225,225,0.2);
+}
+footer .techengage-social li span.icon-soci {
+	background: rgba(55, 165, 235, 0.3);
+	color: white;
+}
+footer .techengage-social li span.icon-soci:hover, footer .techengage-social li span.icon-soci:focus {
+	background: #3f51b5;
+}
+footer .techengage-social li span.icon-soci:hover a, footer .techengage-social li span.icon-soci:focus a {
+	color: #fff;
+}
+.ti_scroll {
+	background: #349BD6;
+	border-color: #349BD6;
+}
+.ti_scroll i {
+	color: #fff;
+}
+/*==================== WP Styles  & woocomerce ====================*/
+.entry-header h1, .entry-header h1::before {
+	color: #3f51b5;
+}
+.entry-content a, .entry-summary a, .entry-footer a {
+	color: #3f51b5;
+}
+.entry-content a:hover, .entry-summary a:hover, .entry-footer a:hover {
+	color: #1a2128;
+}
+.gallery-caption {
+	color: #686868;
+}
+.wp-caption .wp-caption-text {
+	color: #686868;
+}
+.wpcf7-form .wpcf7-form-control {
+	border-color: #ebebeb;
+}
+.wpcf7-form .wpcf7-form-control:hover, .wpcf7-form .wpcf7-form-control:focus {
+	border-color: #3f51b5;
+}
+.wpcf7-form .wpcf7-form-control.wpcf7-submit {
+	border-color: #3f51b5;
+	color: #fff;
+}
+.wpcf7-form .wpcf7-form-control.wpcf7-submit:hover {
+	background: #1a2128;
+	border-color: #1a2128;
+}
+.woocommerce-page .products h3 {
+	color: #333;
+}
+.woocommerce div.product .woocommerce-tabs .panel h2 {
+	color: #333;
+}
+.related.products h2 {
+	color: #333;
+}
+.woocommerce nav.woocommerce-pagination ul li a {
+	color: #333;
+}
+.woocommerce nav .woocommerce-pagination ul li span {
+	color: #333;
+}
+.woocommerce nav.woocommerce-pagination ul li a {
+	border-color: #ddd;
+}
+.woocommerce nav .woocommerce-pagination ul li span {
+	border-color: #ddd;
+}
+
+/*----woocommerce----*/ 
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+	border-color: #ebebeb;
+}
+/*-theme-background-*/ 
+.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce #respond input#submit, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce a.button, .woocommerce button.button, .woocommerce-page .products a.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt[disabled]:disabled, .woocommerce #respond input#submit.alt[disabled]:disabled:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt[disabled]:disabled, .woocommerce a.button.alt[disabled]:disabled:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt[disabled]:disabled, .woocommerce button.button.alt[disabled]:disabled:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt[disabled]:disabled, .woocommerce input.button.alt[disabled]:disabled:hover {
+	background: #3f51b5;
+}
+/*-theme-color-*/ 
+.woocommerce a, .woocommerce #respond input#submit, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page .products .added_to_cart, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	color: #3f51b5;
+}
+/*-theme-border-color-*/ 
+.woocommerce-cart table.cart td.actions .coupon .input-text:hover, .woocommerce-cart table.cart td.actions .coupon .input-text:focus, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce nav .woocommerce-pagination ul li a:focus, .woocommerce nav .woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current {
+	border-color: #3f51b5;
+}
+
+/*-theme-secondary-background-*/ 
+.woocommerce #review_form #respond .form-submit input:hover, .woocommerce-page .products a.button:hover, .woocommerce .cart .button:hover, .woocommerce .cart input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit:hover, .woocommerce #respond input#submit:focus, .woocommerce a.button:hover, .woocommerce a.button:focus, .woocommerce button.button:hover, .woocommerce button.button:focus, .woocommerce input.button:hover, .woocommerce input.button:focus {
+	background: #161c28;
+}
+/*-theme-secondary-color-*/ 
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+	color: #161c28;
+}
+/*-theme-color-white-*/ 
+.woocommerce-page .woocommerce .woocommerce-info a, .woocommerce-page .woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-message, .woocommerce-page .woocommerce-message a, .woocommerce-page .woocommerce-message a:hover, .woocommerce-page .woocommerce-message a:focus, .woocommerce .woocommerce-message::before, .woocommerce-page .woocommerce-error, .woocommerce-page .woocommerce-error a, .woocommerce-page .woocommerce .woocommerce-error:before, .woocommerce-page .woocommerce-info, .woocommerce-page .woocommerce-info a, .woocommerce-page .woocommerce-info:before, .woocommerce-page .woocommerce .woocommerce-info, .woocommerce-cart .wc-proceed-to-checkout a .checkout-button, .woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce a.button, .woocommerce button.button, .woocommerce #respond input#submit, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce nav .woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page .products a.button, .woocommerce #respond input#submit:hover, .woocommerce #respond input#submit:focus, .woocommerce a.button:hover, .woocommerce a.button:focus, .woocommerce button.button:hover, .woocommerce button.button:focus, .woocommerce input.button:hover, .woocommerce input.button:focus {
+	color: #fff;
+}
+
+.woocommerce .products span.onsale, .woocommerce span.onsale {
+	background: #4caf50;
+}
+
+.woocommerce-page .products a .price, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price {
+	color: #000;
+}
+.woocommerce-page .products a .price ins {
+	color: #e96656;
+}
+.woocommerce-page .products .star-rating, .woocommerce-page .star-rating span, .woocommerce-page .stars span a {
+	color: #ffc107;
+}
+
+/*woocommerce-messages*/
+.woocommerce-page .woocommerce-message {
+	background: #2ac56c;
+}
+.woocommerce-page .woocommerce-message a {
+	background-color: #4caf50;
+}
+.woocommerce-page .woocommerce-message a:hover, .woocommerce-page .woocommerce-message a:focus {
+	background-color: #388e3c;
+}
+.woocommerce-page .woocommerce-error {
+	background: #ff5252;
+}
+.woocommerce-page .woocommerce-error a {
+	background-color: #F47565;
+}
+.woocommerce-page .woocommerce-info {
+	background: #4593e3;
+}
+.woocommerce-page .woocommerce-info a {
+	background-color: #5fb8dd;
+}
+.woocommerce-page .woocommerce .woocommerce-info {
+	background: rgb(58, 176, 226);
+}
+
+/*woocommerce-Price-Slider*/ 
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range {
+	background: #3f51b5;
+}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+	background: #3f51b5;
+}
+.woocommerce-page .woocommerce-ordering select {
+	color: #A0A0A0;
+}
+/*woocommerce-price-filter*/
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
+	background: #1a2128;
+}
+/*woocommerce-form*/
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+	border-color: #eee;
+	color: #ccc;
+}
+
+label {
+	color: #4A4A4A;
+}
+
+footer .widget_search .input-group .form-control{
+	background-color: white;
+}
+
+.techengage-blog-category.post-meta-data{
+	margin-bottom: 8px;
+}
+
+.techengage-blog-post-box article > h1{
+	font-weight: 700;
+}
+
+.techengage-blog-post-box article > h1 >a{
+	color: black;
+	transition: 0.3s;
+	letter-spacing: 0.1px;
+}
+
+.techengage-blog-post-box article > h1 >a:hover{
+	text-shadow: 2px 2px grey;
+	transition: 0.3s;
+}
