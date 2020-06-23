@@ -18,27 +18,38 @@ def gen_random(N):
     return gen_list
 
 
+def countingSort(list_of_random, digit):
+
+    n = len(list_of_random)
+    output = [0] * (n)
+    count = [0] * (10)
+    
+    for i in range(0, n):
+        index = int(list_of_random[i]/digit) 
+        count[ (index)%10 ] += 1
+  
+    for i in range(1,10):
+        count[i] += count[i-1]  
+        #print(i, count[i])
+
+    i = n - 1
+    while i >= 0:
+        index = int(list_of_random[i]/digit)
+        output[ count[ (index)%10 ] - 1] = list_of_random[i]
+        count[ (index)%10 ] -= 1
+        i -= 1
+ 
+    for i in range(0,len(list_of_random)): 
+        list_of_random[i] = output[i]
+
 # sorted algorithm.
-def radix_sort(list_of_ints: List[int]) -> List[int]:
+def sort_random(list_of_random):
 
-    RADIX = 10
-    placement = 1
-    max_digit = max(list_of_ints)
-    while placement < max_digit:
-
-        buckets = [list() for _ in range(RADIX)]
-        for i in list_of_ints:
-            tmp = int((i / placement) % RADIX)
-            buckets[tmp].append(i)
-
-        a = 0
-        for b in range(RADIX):
-            for i in buckets[b]:
-                list_of_ints[a] = i
-                a += 1
-        placement *= RADIX
-
-    return list_of_ints
+    maxValue = max(list_of_random)   
+    digit = 1
+    while int(maxValue/digit) > 0: 
+        countingSort(list_of_random, digit)
+        digit *= 10
 
 
 """
@@ -47,6 +58,10 @@ if __name__=="__main__":
     N = int(input())
     random_gen = gen_random(N)
     print(random_gen)
-    sorted_random(random_gen, 0, len(random_gen)-1)
-    print(random_gen)
+    start = time.time()
+    sort_random(random_gen)
+    end = time.time()
+    for i in range(len(random_gen)):
+        print(random_gen[i],end=" ")
+    print(end-start)
 """
