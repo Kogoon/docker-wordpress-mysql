@@ -57,9 +57,7 @@ class RandomTable(Database):
     def insert(self, value):
         
         sql =  "INSERT INTO wp_random(random) "
-        sql += "values('{random}')".format(
-                random=value
-            )
+        sql += "values('{random}')".format(random=value)
         print("DEBUG SQL ===> {}".format(sql))
         
         result = None

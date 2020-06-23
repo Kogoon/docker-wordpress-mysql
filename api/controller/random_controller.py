@@ -111,21 +111,12 @@ def add_random():
     # random(int) -> gen_random(list)
     random_gen = gen_random(random)
     count = len(random_gen)
-    unsort = random_gen
+    for i in range(count):
+        db = RandomTable()
+        j = random_gen[i]
+        db.insert(j)
     sort_random(random_gen)
-    try:
-        for i in range(count):
-            db = RandomTable()
-            j = random_gen[i]
-            db.insert(j)
-            #result = {"message":"ok"} if result is None else result
-    except Exception as e:
-        return {"error":"{}".format(e)}
-
-    result = {
-            "message": unsort,
-            "sorted" : random_gen
-            }
+    result = {"sorted" : random_gen}
 
     return result
 
