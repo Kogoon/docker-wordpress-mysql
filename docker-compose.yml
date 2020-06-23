@@ -8,8 +8,6 @@ services:
       - .env
     environment:
       - TZ=Asia/Seoul
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
       - PYTHON_DB_HOST=${PYTHON_DB_HOST}
       - PYTHON_DB_USER=${PYTHON_DB_USER}
       - PYTHON_DB_PASSWORD=${PYTHON_DB_PASSWORD}

@@ -1,0 +1,51 @@
+upstream api_server {
+	server 		api:5000;
+	keepalive 	100;
+}
+
+upstream web_server {
+	server 		wordpress:9000;
+	keepalive 	100;
+}
+
+server {
+	listen 		80 default;
+	server_name 	final.kogoon.works;
+
+	char-set 	utf-8;
+
+	access_log	/var/log/nginx/access.log;
+	error_log	/var/log/nginx/error.log;
+
+	location = /favicon.ico { 
+                log_not_found off; access_log off; 
+        }
+        location = /robots.txt { 
+                log_not_found off; access_log off; allow all; 
+        }
+
+	location / {
+                try_files $uri $uri/ /index.php$is_args$args;
+        }
+
+        location ~ \.php$ {
+                try_files $uri =404;
+                fastcgi_split_path_info ^(.+\.php)(/.+)$;
+                fastcgi_pass wordpress:9000;
+                fastcgi_index index.php;
+                include fastcgi_params;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_param PATH_INFO $fastcgi_path_info;
+        }
+
+}
+
+server {
+	listen 80;
+	server_name api.kogoon.works;
+	
+	location /api/doc/ {
+		include uwsgi_params;
+		uwsgi_pass http://api_server/;
+	}
+}
