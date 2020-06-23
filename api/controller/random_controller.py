@@ -81,28 +81,51 @@ class Random(Resource):
         return delete_random(id)
 
 
-#
+# DELETE ALL
+@api.route('/random/del')
+class DeleteRandom(Resource):
+
+    @api.response(200, 'Success')
+    def delete(self):
+        return delete_allRandom()
+
+
+
+##############################################################
+
 def count_random():
 
     db = RandomTable()
     result = db.count()
     result = {"message":"ok"} if result is None else result
 
-    return result
-
-
-def 
+    return result 
 
 
 # INSERT
 def add_random():
 
-    j = request.get_json()
-    print("DEBUG > input ===> {}".format(j))
+    #j = request.get_json()
+    random = int(request.args.get('random', ""))
     
-    db = RandomTable()
-    result = db.insert(j)
-    result = {"message":"ok"} if result is None else result
+    # random(int) -> gen_random(list)
+    random_gen = gen_random(random)
+    count = len(random_gen)
+    unsort = random_gen
+    sort_random(random_gen)
+    try:
+        for i in range(count):
+            db = RandomTable()
+            j = random_gen[i]
+            db.insert(j)
+            #result = {"message":"ok"} if result is None else result
+    except Exception as e:
+        return {"error":"{}".format(e)}
+
+    result = {
+            "message": unsort,
+            "sorted" : random_gen
+            }
 
     return result
 
@@ -156,3 +179,12 @@ def delete_random(id):
 
     return result
 
+
+# DELETE ALL
+def delete_allRandom():
+
+    db = RandomTable()
+    result = db.deleteAll()
+    result = {"message":"ok"} if result is None else result
+
+    return result 

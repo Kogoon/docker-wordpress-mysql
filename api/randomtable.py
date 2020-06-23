@@ -108,7 +108,23 @@ class RandomTable(Database):
             self.cursor.execute(sql)
             self.db.commit()
         except Exception as e:
-            retult = {"error" : "{}".format(e)}
+            result = {"error" : "{}".format(e)}
 
         return result
 
+
+    def deleteAll(self):
+
+        sql = "DELETE FROM wp_random;"
+        
+        result = None
+        try:
+            self.cursor.execute(sql)
+            self.db.commit()
+            sql = "ALTER TABLE wp_random AUTO_INCREMENT=1;"
+            self.cursor.execute(sql)
+            self.db.commit()
+        except Exception as e:
+            result = {"error":"{]".format(e)}
+
+        return result
