@@ -9,5 +9,5 @@ column: id(int, autoincrement), random(int)
 	);
 
 
-> alter table wp_random modify column random text not null;
+#> alter table wp_random modify column random text not null;
 
