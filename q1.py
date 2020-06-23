@@ -1,7 +1,8 @@
 """
-INPUT : N(int) (0 < r <= N)
-OUTPUT : list -> Ascending
+INPUT  > N(int) ( 0 < r <= N)
+OUTPUT > gen_list, sorted(Ascending)_list
 """
+
 import random
 import sys
 import time
@@ -40,7 +41,7 @@ def sorted_random(sorting, left, right):
     sorted_random(sorting, b + 1, right)
 
 
-"""
+
 if __name__=="__main__":
 
     N = int(input())
@@ -48,4 +49,3 @@ if __name__=="__main__":
     print(random_gen)
     sorted_random(random_gen, 0, len(random_gen)-1)
     print(random_gen)
-"""

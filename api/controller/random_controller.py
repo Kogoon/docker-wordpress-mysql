@@ -2,6 +2,8 @@ from flask import jsonify
 from flask import request
 from flask_restplus import Namespace, Resource, fields
 from randomtable import RandomTable
+from q1 import *
+import time
 
 
 api = Namespace('Random', description='APIs for random algorithms')
@@ -14,6 +16,9 @@ resource_random = api.model('Random', {
 luParser = api.parser()
 luParser.add_argument('page', type=int, help='page number', location='query')
 luParser.add_argument('itemsInPage', type=int, help='Number of Items in a page', location='query')
+
+ruParser = api.parser()
+ruParser.add_argument('random', type=int, help='random algo', location='query')
 
 
 # paging wp_random table data 
@@ -30,9 +35,10 @@ class Randoms(Resource):
 
 # Post Random data ( Create random )
 @api.route('/random')
-class randomAdd(Resource):
+class AddRandom(Resource):
 
-    @api.expect(resource_random, validate=False)
+    @api.expect(ruParser)
+    #@api.expect(resource_random, validate=False)
     @api.response(200, 'Success')
     @api.response(400, 'Validation Error')
     def post(self):
@@ -67,14 +73,22 @@ class Random(Resource):
 
 # INSERT
 def add_random():
-    
-    j = request.get_json()
 
-    print("DEBUG > input ===> {}".format(j))
+    random = int(request.args.get('random', ""))
+    
+    start = time.time()
+    gen_list = gen_random(random)
+    sorted_list = sorted_random(gen_list, 0, len(gen_list)-1)
+    end = time.time()
 
     db = RandomTable()
-    result = db.insert(j)
-    result = {"message":"ok"} if result is None else result
+    result = db.insert(sorted_list)
+    result = { 
+            "message":"ok",
+            "gen_list" : gen_list,
+            "sorted_list" : sorted_list,
+            "time" : end-start
+            } if result is None else result
     
     return result
 

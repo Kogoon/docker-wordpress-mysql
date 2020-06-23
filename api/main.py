@@ -1,7 +1,6 @@
 from controller import blueprint as api
 from flask import Flask
 
-
 app = Flask(__name__)
 app.register_blueprint(api)
 

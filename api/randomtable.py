@@ -42,11 +42,11 @@ class RandomTable(Database):
 
 
     # For Insert
-    def insert(self, j):
+    def insert(self, list):
         
         sql =  "INSERT INTO wp_random(random) "
         sql += "values('{random}')".format(
-                random=utils.addslashes(json.dumps(j.get("random", "")))
+                random=list
             )
         print("DEBUG SQL ===> {}".format(sql))
         
