@@ -46,6 +46,16 @@ class AddRandom(Resource):
         return add_random()
 
 
+@api.route('/algo')
+class CountRandom(Resource):
+
+    @api.response(200, 'Success')
+    @api.response(400, 'Validation Error')
+    def get(self):
+        ''' random row count '''
+        return count_random()
+
+
 # Managing random data ( lookup, update, delete )
 @api.route('/random/<id>')
 @api.doc(params={'id':'This is a randomID'})
@@ -71,25 +81,29 @@ class Random(Resource):
         return delete_random(id)
 
 
+#
+def count_random():
+
+    db = RandomTable()
+    result = db.count()
+    result = {"message":"ok"} if result is None else result
+
+    return result
+
+
+def 
+
+
 # INSERT
 def add_random():
 
-    random = int(request.args.get('random', ""))
+    j = request.get_json()
+    print("DEBUG > input ===> {}".format(j))
     
-    start = time.time()
-    gen_list = gen_random(random)
-    sorted_list = sorted_random(gen_list, 0, len(gen_list)-1)
-    end = time.time()
-
     db = RandomTable()
-    result = db.insert(sorted_list)
-    result = { 
-            "message":"ok",
-            "gen_list" : gen_list,
-            "sorted_list" : sorted_list,
-            "time" : end-start
-            } if result is None else result
-    
+    result = db.insert(j)
+    result = {"message":"ok"} if result is None else result
+
     return result
 
 

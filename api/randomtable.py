@@ -41,12 +41,24 @@ class RandomTable(Database):
         return result
 
 
+    def count(self):
+
+        sql = "SELECT random FROM wp_random;"
+        print("DEBUG SQL ===> {}".format(sql))
+
+        self.cursor.execute(sql)
+        self.cursor.fetchall()
+        result = self.cursor.rowcount
+
+        return result
+
+
     # For Insert
-    def insert(self, list):
+    def insert(self, value):
         
         sql =  "INSERT INTO wp_random(random) "
         sql += "values('{random}')".format(
-                random=list
+                random=value
             )
         print("DEBUG SQL ===> {}".format(sql))
         
