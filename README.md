@@ -25,4 +25,8 @@ select * from wp_options where option_name='stylesheet';
 plugin -> install & activate. 
 
 
-
+Q5)
+1) INDEX 0.00sec / NO 0.00sec
+2) INDEX 0.00sec / NO 0.00sec
+3) INDEX 0.00sec / NO 0.01sec
+4) INDEX 0.00sec / NO 0.02sec
