@@ -5,16 +5,16 @@ README.md/
 **/__pycache__/
 
 # Environment
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
+#.env
+#.venv
+#env/
+#venv/
+#ENV/
+#env.bak/
 
 # config directories for docker-compose
 /mysql/
-/config/
+#/config/
 /logs/
 /wordpress/
 
